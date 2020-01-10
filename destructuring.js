@@ -21,7 +21,10 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+let {color} = carDetails;
+let {make} = carDetails;
+let {model} = carDetails;
+let {year} = carDetails;
 
 
 
@@ -34,8 +37,11 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
-  
+
+  let {title} = obj;
+  let {firstName} = obj;
+  let {lastName} = obj;
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -53,7 +59,15 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj){
+  let {utah} = obj;
+  let {california} = obj;
+  let {texas} = obj;
+  let {arizona} = obj;
+
+  return utah + arizona + california + texas;
+
+}
 
 
 
@@ -67,7 +81,20 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+
+function ingredients(obj){
+  let {carb} = obj;
+  let {fat} = obj;
+  let {protein} = obj;
+
+  let arr = [];
+  arr.push(carb);
+  arr.push(fat);
+  arr.push(protein);
+
+  return arr;
+
+}
 
 
 
@@ -85,7 +112,17 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers({first, second, third}){
+  let smallest = null;
+  if(first < second && first < third){
+    smallest = first;
+  }else if(second < first && second < third ){
+    smallest = second;
+  }else if(third < first && third < smallest){
+    smallest = third;
+  }
+  return smallest;
+}
 
 
 
@@ -97,6 +134,18 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups({a, b, c}){
+  let longest = null;
+
+  if(a.length > b.length && a.length > c.length){
+    longest = a;
+  }else if(b.length > a.length && b.length > c.length ){
+    longest = b;
+  }else if(c.length > a.length && c.length > b.length){
+    longest = c;
+  }
+
+  return longest;
+}
 
 
