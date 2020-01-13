@@ -81,15 +81,13 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 
-function removeDuplicates(arr){
-  arr.filter(
-    function(element, i){
-      arr[i] = arr.indexOf(element);
-      // I don't know how to do this. 
+function removeDuplicates(){
+  for(let i = 0; i < workplaceAccidents.length; i++){
+    if(workplaceAccidents.indexOf(workplaceAccidents[i]) !== i){
+      workplaceAccidents.splice(i, 1);
     }
-  );
-
-  return arr;
+  }
+  return workplaceAccidents;
 }
 
 
@@ -204,18 +202,18 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
   
 // }
 
-function looper(arr){
-  for(let i = 0; i < arr.length; i++){
-    for(let j = 0; j < arr[i].length; j++){
-      if(arr[i][j] % 2 == 0){
-        arr[i][j] = 'even';
+function looper(){
+  for(let i = 0; i < numsArr.length; i++){
+    for(let j = 0; j < numsArr[i].length; j++){
+      if(numsArr[i][j] % 2 == 0){
+        numsArr[i][j] = 'even';
       }
       else{
-        arr[i][j] = 'odd';
+        numsArr[i][j] = 'odd';
       }
     }
   }
-  return arr;
+  return numsArr;
 }
 
 
